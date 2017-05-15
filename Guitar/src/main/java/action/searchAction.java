@@ -81,23 +81,6 @@ public class searchAction extends ActionSupport {
 			HttpServletResponse response=ServletActionContext.getResponse();  
 	        response.setContentType("text/html");
 	        response.setContentType("text/plain; charset=utf-8");
-//	        Inventory inventroy = new Inventory();
-//	        List<Guitar> guitarList = guitarService.getAll();
-//	        inventroy.setGuitars(guitarList);
-//	        GuitarSpec guitarSpec = new GuitarSpec(builder, model, type, backWood, topWood);
-//	        List<Guitar> guitarList2 =  inventroy.search(guitarSpec);
-//	        JSONArray jsonArray = new JSONArray();
-//			for(Guitar guitar : guitarList2){
-//				JSONObject jo = new JSONObject();
-//				jo.put("price", guitar.getPrice());
-//				jo.put("serialNumber", guitar.getSerialNumber());
-//				jo.put("backWood", guitar.getGuitarSpec().getBackWood());
-//				jo.put("builder", guitar.getGuitarSpec().getBuilder());
-//				jo.put("model", guitar.getGuitarSpec().getModel());
-//				jo.put("topWood", guitar.getGuitarSpec().getTopWood());
-//				jo.put("type", guitar.getGuitarSpec().getType());
-//				jsonArray.put(jo);
-//			}
 	        GuitarSpec guitarSpec = new GuitarSpec(builder, model, type, backWood, topWood);
 	        JSONArray jsonArray = guitarService.search(guitarSpec);
 			inputStream =new ByteArrayInputStream(jsonArray.toString()
