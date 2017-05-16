@@ -28,10 +28,10 @@ public class GuitarTest {
 	public void test1() {
 		GuitarSpec guitarSpec = new GuitarSpec("","","","alder","");
 		Inventory inventroy = new Inventory();
-        List<Guitar> guitarList = new ArrayList<Guitar>();
-        guitarList = guitarService.getAll();
-        inventroy.setGuitars(guitarList);
-        List<Guitar> guitarList2 = new ArrayList<Guitar>();
+       		List<Guitar> guitarList = new ArrayList<Guitar>();
+        	guitarList = guitarService.getAll();
+        	inventroy.setGuitars(guitarList);
+        	List<Guitar> guitarList2 = new ArrayList<Guitar>();
 		try {
 			guitarList2 = inventroy.search(guitarSpec);
 		} catch (Exception e) {
@@ -39,7 +39,7 @@ public class GuitarTest {
 			e.printStackTrace();
 		}
 
-        JSONArray jsonArray = new JSONArray();
+        	JSONArray jsonArray = new JSONArray();
 		for(Guitar guitar : guitarList2){
 			JSONObject jo = new JSONObject();
 			jo.put("price", guitar.getPrice());
